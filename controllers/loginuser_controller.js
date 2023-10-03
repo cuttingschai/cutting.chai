@@ -28,7 +28,7 @@ const addUser = (req, res) => {
     })
     .catch((error) => {
       console.log(error);
-      const response = commonResponse(500, 'An error occurred while checking mobile number existence.', null);
+      const response = commonResponse(500, 'An error occurred while checking mobile number existence.', error);
       return res.status(500).json(response);
     });
   } else {
