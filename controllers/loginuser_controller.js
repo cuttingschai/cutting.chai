@@ -58,12 +58,8 @@ const addUser = (req, res) => {
       return res.status(500).json(response);
     });
   }
-
-  // Check if mobile number already exists
-  
 };
 
-// Replace this with your actual implementation
 function checkMobileproviderExists(mobile) {
   return new Promise((resolve, reject) => {
     db.pool.query('SELECT * FROM provider WHERE mobile = $1', [mobile], (err, result) => {
