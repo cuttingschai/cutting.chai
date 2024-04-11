@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const dotenv = require("dotenv")
 dotenv.config()
-const PORT = 5000
+const PORT = 4007
 
 app.use(express.json())
 app.get("/", (req, res) => {
